@@ -45,8 +45,8 @@ class Template {
         $data['js_file'] = $this->js_file;
         $data['css_file'] = $this->css_file;
         $data['js_embed'] = $this->js_embed;
-        $data['css_embed'] = $this->css_embed; 
-        $data['tab']= $this->tab; 
+        $data['css_embed'] = $this->css_embed;
+        $data['tab'] = $this->tab;
         $controller->parser->parse($template_view_path, $data);
     }
 
@@ -77,7 +77,7 @@ class Template {
     public function append_css($cssfile) {
         array_push($this->css_file, $cssfile);
     }
-    
+
     public function set_tab($tab) {
         $this->tab = $tab;
     }
