@@ -1,2 +1,3 @@
 /inc /inc
 /application/libraries/Template.php /application/libraries/Template.php
+/application/views/design /application/views/design
