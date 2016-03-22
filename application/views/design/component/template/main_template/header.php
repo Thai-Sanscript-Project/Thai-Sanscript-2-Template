@@ -1,43 +1,53 @@
 
-<nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
-    <div class="container-fluid">
-        <!-- Brand and toggle get grouped for better mobile display -->
-
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand page-scroll" href="#">
-                 Thai - Sanscript V.1
-            </a>
-            
-        </div>
-
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav navbar-right">
-                <li>
-                    <a class="page-scroll" href="#about">ปริวรรต</a>
-                </li>
-                <li>
-                    <a class="page-scroll" href="#services">นโยบายการใช้งาน</a>
-                </li>
-                <li>
-                    <a class="page-scroll" href="#document">แหล่งเอกสาร</a>
-                </li>
-                <li>
-                    <a class="page-scroll" href="#portfolio">ตัวอย่างการปริวรรต </a>
-                </li>
-                <li>
-                    <a class="page-scroll" href="#contact">รายงานข้อผิดพลาด </a>
-                </li>
-                
-            </ul>
-        </div>
-        <!-- /.navbar-collapse -->
-    </div>
-    <!-- /.container-fluid -->
-</nav>
+<?php
+$active_menu;
+$menu[10] = "";
+$menu[20] = "";
+$menu[30] = "";
+$menu[40] = "";
+$menu[50] = "";
+$menu[51] = "";
+$menu[52] = "";
+$menu[53] = "";
+$menu[54] = "";
+$menu[60] = "";
+$menu[70] = "";
+$menu[$active_menu] = "active";
+$mod =  $active_menu % 10;
+$mainmenu = $active_menu - $mod;
+$menu[$mainmenu] = "active";
+?>
+<header id="header">         
+    <nav class="navbar navbar-inverse" role="banner">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index"><img src="<?php echo base_url() ?>inc/images/logo.png" alt="logo"></a>
+            </div>
+            <div class="collapse navbar-collapse navbar-right">
+                <ul class="nav navbar-nav">
+                    <li class="<?php echo $menu[10] ?>"><a href="<?php echo site_url() ?>/demo/demo/index">Home</a></li>
+                    <li class="<?php echo $menu[20] ?>"><a href="<?php echo site_url() ?>/demo/demo/about_us">About Us</a></li>
+                    <li class="<?php echo $menu[30] ?>"><a href="<?php echo site_url() ?>/demo/demo/services">Services</a></li>
+                    <li class="<?php echo $menu[40] ?>"><a href="<?php echo site_url() ?>/demo/demo/portfolio">Portfolio</a></li>
+                    <li class="dropdown <?php echo $menu[50] ?>">
+                        <a href="<?php echo site_url() ?>/demo/demo/#" class="dropdown-toggle" data-toggle="dropdown">Pages <i class="fa fa-angle-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li class="<?php echo $menu[51] ?>"><a href="<?php echo site_url() ?>/demo/demo/blog_item">Blog Single</a></li>
+                            <li class="<?php echo $menu[52] ?>"><a href="<?php echo site_url() ?>/demo/demo/pricing">Pricing</a></li>
+                            <li class="<?php echo $menu[53] ?>"><a href="<?php echo site_url() ?>/demo/demo/error_404">404</a></li>
+                            <li class="<?php echo $menu[54] ?>"><a href="<?php echo site_url() ?>/demo/demo/shortcodes">Shortcodes</a></li>
+                        </ul>
+                    </li>
+                    <li class="<?php echo $menu[60] ?>"><a href="<?php echo site_url() ?>/demo/demo/blog">Blog</a></li> 
+                    <li class="<?php echo $menu[70] ?>"><a href="<?php echo site_url() ?>/demo/demo/contact_us">Contact</a></li>                        
+                </ul>
+            </div>
+        </div><!--/.container-->
+    </nav><!--/nav-->
+</header><!--/header-->

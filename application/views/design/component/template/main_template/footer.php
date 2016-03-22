@@ -1,4 +1,62 @@
 
+<section id="bottom">
+    <div class="container wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
+        <div class="row">
+            <div class="col-md-3 col-sm-6">
+                <div class="widget">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="<?php echo site_url() ?>/demo/demo/#">About us</a></li>
+                    </ul>
+                </div>    
+            </div><!--/.col-md-3-->
+
+            <div class="col-md-3 col-sm-6">
+                <div class="widget">
+                    <h3>Support</h3>
+                    <ul>
+                        <li><a href="<?php echo site_url() ?>/demo/demo/#">Faq</a></li>
+                    </ul>
+                </div>    
+            </div><!--/.col-md-3-->
+
+            <div class="col-md-3 col-sm-6">
+                <div class="widget">
+                    <h3>Developers</h3>
+                    <ul>
+                        <li><a href="<?php echo site_url() ?>/demo/demo/#">Web Development</a></li>                    
+                    </ul>
+                </div>    
+            </div><!--/.col-md-3-->
+
+            <div class="col-md-3 col-sm-6">
+                <div class="widget">
+                    <h3>Our Partners</h3>
+                    <ul>
+                        <li><a href="<?php echo site_url() ?>/demo/demo/#">Adipisicing Elit</a></li>
+                    </ul>
+                </div>    
+            </div><!--/.col-md-3-->
+        </div>
+    </div>
+</section><!--/#bottom-->
+<footer id="footer" class="midnight-blue">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                &copy; 2016 <a target="_blank" href="http://Thai-Sanscript.com/" title="Share — copy and redistribute the material in any medium or format , Adapt — remix, transform, and build upon the material">Thai-Sanscript</a>. Attribution, NonCommercial, ShareAlike 
+            </div>
+            <div class="col-sm-6">
+                <ul class="pull-right">
+                    <li><a href="<?php echo site_url() ?>/demo/demo/#">Home</a></li>
+                    <li><a href="<?php echo site_url() ?>/demo/demo/#">About Us</a></li>
+                    <li><a href="<?php echo site_url() ?>/demo/demo/#">Faq</a></li>
+                    <li><a href="<?php echo site_url() ?>/demo/demo/#">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer><!--/#footer-->
 
 <aside class="bg-dark">
     <div class="container text-center">
@@ -26,7 +84,6 @@
                 </a>
                 .
             </h5>
-            <a href="#" class="btn btn-default btn-xl">กลับด้านบน</a>
         </div>
     </div>
 </aside>

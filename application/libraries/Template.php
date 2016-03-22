@@ -12,7 +12,7 @@ class Template {
     public $js_embed = array();
     public $css_embed = array();
     public $page_section = array();
-    public $tab = "";
+    public $active_menu = "";
     protected $CI;
 
     public function __construct() {
@@ -21,22 +21,11 @@ class Template {
     }
 
     public function render_main_template(CI_Controller $controller, $data = array()) {
-        $file_lang = array('component');
-        $controller->lang->load(array($file_lang), 'thai');
-        $data['session'] = $this->allow_access($controller);
         $this->render_template($controller, "main_template", $data);
-    }
-
-    public function render_sample_template(CI_Controller $controller, $data = array()) {
-        $this->render_template($controller, "example_template", $data);
     }
 
     public function render_template(CI_Controller $controller, $templete_name, $data = array()) {
         $this->set_template($controller, "design/templates/" . $templete_name, $data);
-    }
-
-    public function render_login_template(CI_Controller $controller, $data = array()) {
-        $this->render_template($controller, "login_template", $data);
     }
 
     public function set_template(CI_Controller $controller, $template_view_path, $data = array()) {
@@ -46,7 +35,7 @@ class Template {
         $data['css_file'] = $this->css_file;
         $data['js_embed'] = $this->js_embed;
         $data['css_embed'] = $this->css_embed;
-        $data['tab'] = $this->tab;
+        $data['active_menu'] = $this->active_menu;
         $controller->parser->parse($template_view_path, $data);
     }
 
@@ -78,8 +67,8 @@ class Template {
         array_push($this->css_file, $cssfile);
     }
 
-    public function set_tab($tab) {
-        $this->tab = $tab;
+    public function set_active_menu($active_menu) {
+        $this->active_menu = $active_menu;
     }
 
     public function set_lang(CI_Controller $controller) {

@@ -1,3 +1,7 @@
 /inc /inc
 /application/libraries/Template.php /application/libraries/Template.php
 /application/views/design /application/views/design
+/application/views/demo /application/views/demo
+/application/controllers/demo /application/controllers/demo
+/application/helpers/MY_language_helper.php /application/helpers/MY_language_helper.php
+/application/helpers/MY_url_helper.php /application/helpers/MY_url_helper.php
