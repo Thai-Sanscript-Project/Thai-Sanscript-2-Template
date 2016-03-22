@@ -31,21 +31,21 @@ $menu[$mainmenu] = "active";
             </div>
             <div class="collapse navbar-collapse navbar-right">
                 <ul class="nav navbar-nav">
-                    <li class="<?php echo $menu[10] ?>"><a href="<?php echo site_url() ?>/demo/demo/index">Home</a></li>
-                    <li class="<?php echo $menu[20] ?>"><a href="<?php echo site_url() ?>/demo/demo/about_us">About Us</a></li>
-                    <li class="<?php echo $menu[30] ?>"><a href="<?php echo site_url() ?>/demo/demo/services">Services</a></li>
-                    <li class="<?php echo $menu[40] ?>"><a href="<?php echo site_url() ?>/demo/demo/portfolio">Portfolio</a></li>
+                    <li class="<?php echo $menu[10] ?>"><a href="<?php echo site_url() ?>/demo/theme/index">Home</a></li>
+                    <li class="<?php echo $menu[20] ?>"><a href="<?php echo site_url() ?>/demo/theme/about_us">About Us</a></li>
+                    <li class="<?php echo $menu[30] ?>"><a href="<?php echo site_url() ?>/demo/theme/services">Services</a></li>
+                    <li class="<?php echo $menu[40] ?>"><a href="<?php echo site_url() ?>/demo/theme/portfolio">Portfolio</a></li>
                     <li class="dropdown <?php echo $menu[50] ?>">
                         <a href="<?php echo site_url() ?>/demo/demo/#" class="dropdown-toggle" data-toggle="dropdown">Pages <i class="fa fa-angle-down"></i></a>
                         <ul class="dropdown-menu">
-                            <li class="<?php echo $menu[51] ?>"><a href="<?php echo site_url() ?>/demo/demo/blog_item">Blog Single</a></li>
-                            <li class="<?php echo $menu[52] ?>"><a href="<?php echo site_url() ?>/demo/demo/pricing">Pricing</a></li>
-                            <li class="<?php echo $menu[53] ?>"><a href="<?php echo site_url() ?>/demo/demo/error_404">404</a></li>
-                            <li class="<?php echo $menu[54] ?>"><a href="<?php echo site_url() ?>/demo/demo/shortcodes">Shortcodes</a></li>
+                            <li class="<?php echo $menu[51] ?>"><a href="<?php echo site_url() ?>/demo/theme/blog_item">Blog Single</a></li>
+                            <li class="<?php echo $menu[52] ?>"><a href="<?php echo site_url() ?>/demo/theme/pricing">Pricing</a></li>
+                            <li class="<?php echo $menu[53] ?>"><a href="<?php echo site_url() ?>/demo/theme/error_404">404</a></li>
+                            <li class="<?php echo $menu[54] ?>"><a href="<?php echo site_url() ?>/demo/theme/shortcodes">Shortcodes</a></li>
                         </ul>
                     </li>
-                    <li class="<?php echo $menu[60] ?>"><a href="<?php echo site_url() ?>/demo/demo/blog">Blog</a></li> 
-                    <li class="<?php echo $menu[70] ?>"><a href="<?php echo site_url() ?>/demo/demo/contact_us">Contact</a></li>                        
+                    <li class="<?php echo $menu[60] ?>"><a href="<?php echo site_url() ?>/demo/theme/blog">Blog</a></li> 
+                    <li class="<?php echo $menu[70] ?>"><a href="<?php echo site_url() ?>/demo/theme/contact_us">Contact</a></li>                        
                 </ul>
             </div>
         </div><!--/.container-->

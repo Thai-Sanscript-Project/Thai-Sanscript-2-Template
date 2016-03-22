@@ -5,3 +5,4 @@
 /application/controllers/demo /application/controllers/demo
 /application/helpers/MY_language_helper.php /application/helpers/MY_language_helper.php
 /application/helpers/MY_url_helper.php /application/helpers/MY_url_helper.php
+/application/controllers/Language.php /application/controllers/Language.php
