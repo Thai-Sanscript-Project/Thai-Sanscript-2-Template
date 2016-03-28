@@ -24,6 +24,10 @@ class Template {
         $this->render_template($controller, "main_template", $data);
     }
 
+    public function render_demo_template(CI_Controller $controller, $data = array()) {
+        $this->render_template($controller, "demo_template", $data);
+    }
+
     public function render_template(CI_Controller $controller, $templete_name, $data = array()) {
         $this->set_template($controller, "design/templates/" . $templete_name, $data);
     }

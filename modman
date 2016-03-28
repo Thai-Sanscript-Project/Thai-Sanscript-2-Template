@@ -6,3 +6,5 @@
 /application/helpers/MY_language_helper.php /application/helpers/MY_language_helper.php
 /application/helpers/MY_url_helper.php /application/helpers/MY_url_helper.php
 /application/controllers/Language.php /application/controllers/Language.php
+/application/controllers/Main.php /application/controllers/Main.php
+/application/views/main /application/views/main

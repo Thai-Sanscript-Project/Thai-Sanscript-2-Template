@@ -5,6 +5,8 @@
 <link href="<?php echo echo_css() ?>/animate.min.css" rel="stylesheet">
 <link href="<?php echo echo_css() ?>/main.css" rel="stylesheet">
 <link href="<?php echo echo_css() ?>/responsive.css" rel="stylesheet">
+
+<link href="<?php echo echo_css() ?>/override_main.css" rel="stylesheet">
 <!--[if lt IE 9]>
 <script src="<?php echo echo_js() ?>/html5shiv.js"></script>
 <script src="<?php echo echo_js() ?>/respond.min.js"></script>

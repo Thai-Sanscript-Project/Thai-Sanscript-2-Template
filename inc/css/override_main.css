@@ -1,0 +1,13 @@
+#main-slider .carousel .carousel-content {
+    margin-top: 0px; 
+}
+#main-slider .carousel h3 {
+    color: #fff;
+    font-style: oblique;
+}
+#main-slider .carousel .slide-margin {
+    margin-top: 70px;
+}
+#main-slider .carousel .item {
+    height: 660px;
+}
