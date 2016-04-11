@@ -2,8 +2,10 @@
 <link href="<?php echo echo_css() ?>/bootstrap.min.css" rel="stylesheet">
 <link href="<?php echo echo_css() ?>/font-awesome.min.css" rel="stylesheet">
 <link href="<?php echo echo_css() ?>/prettyPhoto.css" rel="stylesheet">
+<!--<link href="<?php echo echo_css() ?>/item_hover.css" rel="stylesheet">-->
 <link href="<?php echo echo_css() ?>/animate.min.css" rel="stylesheet">
 <link href="<?php echo echo_css() ?>/main.css" rel="stylesheet">
+ <!--<link href="<?php echo echo_css() ?>/stylesheet.css" rel="stylesheet">-->
 <link href="<?php echo echo_css() ?>/responsive.css" rel="stylesheet">
 
 <link href="<?php echo echo_css() ?>/override_main.css" rel="stylesheet">

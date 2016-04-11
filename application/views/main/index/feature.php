@@ -1,14 +1,15 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed'); ?>
-<section id="feature" >
-    <div class="container">
-        <div class="center wow fadeInDown">
-            <h2>วัตถุประสงค์การพัฒนา</h2>
-            <p class="lead">ปัจจุบันเอกสารภาษาสันสกฤต ทั้งอักษรเทวนาครีและโรมัน มีอยู่อย่างมากมายในอินเตอร์เน็ต ไทย-สันสคริปท์จะช่วย.</p>
-        </div>
 
+<section id="feature" class="transparent-bg">
+    <div class="container">
         <div class="row">
             <div class="features">
-               
+                <div class="center wow fadeInDown">
+                    <h2>นโยบายการใช้งาน</h2>
+                    <p class="lead">ปัจจุบันเอกสารภาษาสันสกฤต ทั้งอักษรเทวนาครีและโรมาไนซ์ มีอยู่อย่างมากมายในอินเตอร์เน็ต ไทย-สันสคริปท์จะช่วย.</p>
+                </div>
+
+
                 <div class="col-md-4 col-sm-6 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
                     <div class="feature-wrap">
                         <i class="fa fa-diamond"></i>
@@ -58,5 +59,8 @@
                 </div><!--/.col-md-4-->
             </div><!--/.services-->
         </div><!--/.row-->    
+
+
+
     </div><!--/.container-->
 </section><!--/#feature-->

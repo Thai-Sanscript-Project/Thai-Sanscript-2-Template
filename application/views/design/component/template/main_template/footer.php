@@ -31,7 +31,7 @@
             </div>
             <div class="col-sm-6">
                 <ul class="pull-right">
-                    <li><a href="<?php echo site_url() ?>/demo/demo/#">หน้าหลัก</a></li>
+                    <li><a href="<?php echo site_url() ?>/">หน้าหลัก</a></li>
                     <li><a href="http://www.boombig.xyz/">ผู้จัดทำ</a></li>
                     <li><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">สัญญาอนุญาต</a></li>
                     <li><a href="http://learnsanskrit.org/tools/sanscript">พื้นฐานของงาน</a></li>

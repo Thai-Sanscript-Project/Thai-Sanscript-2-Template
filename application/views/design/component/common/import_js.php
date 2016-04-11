@@ -5,6 +5,10 @@
 <script src="<?php echo_js() ?>/jquery.isotope.min.js"></script>
 <script src="<?php echo_js() ?>/main.js"></script>
 <script src="<?php echo_js() ?>/wow.min.js"></script>
+<script type="text/javascript">
+    $('.carousel').carousel();
+</script>
+
 
 <?php foreach ($js_file as $value) { ?>
     <script src="<?php echo_js($value); ?>"></script>

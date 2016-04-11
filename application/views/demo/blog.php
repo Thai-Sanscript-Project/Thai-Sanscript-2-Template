@@ -8,7 +8,7 @@
         <div class="blog">
             <div class="row">
                  <div class="col-md-8">
-                    <div class="blog_item">
+                    <div class="blog-item">
                         <div class="row">
                             <div class="col-xs-12 col-sm-2 text-center">
                                 <div class="entry-meta">
@@ -28,7 +28,7 @@
                         </div>    
                     </div><!--/.blog_item-->
                         
-                    <div class="blog_item">
+                    <div class="blog-item">
                         <div class="row">
                              <div class="col-sm-2 text-center">
                                 <div class="entry-meta"> 
@@ -155,3 +155,4 @@
             </div><!--/.row-->
         </div>
     </section><!--/#blog-->
+

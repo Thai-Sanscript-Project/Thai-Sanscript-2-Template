@@ -11,3 +11,6 @@
 #main-slider .carousel .item {
     height: 660px;
 }
+.form-group .form-control {
+    border-color: #838383;
+}
