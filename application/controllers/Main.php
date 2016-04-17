@@ -15,6 +15,7 @@ class Main extends CI_Controller {
         $this->template->set_page_title("ปริวรรตอักษร");
         $this->template->set_active_menu(20);
         $this->template->append_page_section("main/transliterate/index");
+         $this->template->append_js_embed("main/transliterate/table-compare_js");
         $this->template->render_main_template($this);
     }
 

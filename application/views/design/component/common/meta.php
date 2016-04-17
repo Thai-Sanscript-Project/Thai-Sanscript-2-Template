@@ -1,4 +1,4 @@
-
+<?php defined('BASEPATH') OR exit('No direct script access allowed'); ?>
 <!--META-->
 <meta charset="utf-8">
 <meta name="google-site-verification" content="VjeBKveqBYHXX6sdt5OxjiivCr-B7PQFtvQKvCwae90" />

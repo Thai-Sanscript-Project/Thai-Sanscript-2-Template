@@ -1,4 +1,4 @@
-
+<?php defined('BASEPATH') OR exit('No direct script access allowed'); ?>
 <?php
 $active_menu;
 $menu[10] = "";
@@ -27,11 +27,11 @@ $menu[$mainmenu] = "active";
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index"><img src="<?php echo base_url() ?>inc/images/logo.png" alt="logo"></a>
+                <a class="navbar-brand" href="<?php echo site_url() ?>"><img src="<?php echo base_url() ?>inc/images/logo.png" alt="logo"></a>
             </div>
             <div class="collapse navbar-collapse navbar-right">
                 <ul class="nav navbar-nav">
-                    <li class="<?php echo $menu[10] ?>"><a href="<?php echo site_url() ?>/">หน้าหลัก</a></li>
+                    <li class="<?php echo $menu[10] ?>"><a href="<?php echo site_url() ?>">หน้าหลัก</a></li>
                     <li class="<?php echo $menu[20] ?>"><a href="<?php echo site_url() ?>/main/transliterate">ปริวรรต</a></li>
                     <li class="<?php echo $menu[30] ?>"><a href="<?php echo site_url() ?>/demo/theme/services">ติดต่อเรา</a></li>
                    <!--<?php /**

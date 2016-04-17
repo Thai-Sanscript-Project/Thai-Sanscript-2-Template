@@ -1,4 +1,4 @@
-
+<?php defined('BASEPATH') OR exit('No direct script access allowed'); ?>
 <link href="<?php echo echo_css() ?>/bootstrap.min.css" rel="stylesheet">
 <link href="<?php echo echo_css() ?>/font-awesome.min.css" rel="stylesheet">
 <link href="<?php echo echo_css() ?>/prettyPhoto.css" rel="stylesheet">

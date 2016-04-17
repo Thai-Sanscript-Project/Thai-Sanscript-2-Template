@@ -1,3 +1,4 @@
+<?php defined('BASEPATH') OR exit('No direct script access allowed'); ?>
 <section id="conatcat-info">
     <div class="container">
         <div class="row">
