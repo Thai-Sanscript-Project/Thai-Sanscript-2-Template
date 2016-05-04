@@ -3,84 +3,88 @@
     <div class="container">
         <div class="center">        
             <h2>เลือกชนิดตัวอักษรที่จะทำการปริวรรต</h2>
-            <p class="lead">เมื่อคุณเลือกชนิดตัวอักษรแล้ว คุณสามารถดูตารางเปรียบเทียบการปริวรรตอักษรด้านล่าง [<a href="#contact-page">ดูตารางเปรียบเทียบ</a>]</p>
+            <p class="lead">เมื่อคุณเลือกชนิดตัวอักษรแล้ว คุณสามารถดูตารางเปรียบเทียบการปริวรรตอักษรด้านล่าง [<a href="#contact-page">ดูตารางเปรียบเทียบอักษร</a>]</p>
         </div> 
         <div class="row contact-wrap"> 
             <div class="status alert alert-success" style="display: none"></div>
-            <form id="main-contact-form" class="contact-form" name="contact-form" method="post" action="sendemail.php">
+            <form id="main-contact-form" class="contact-form" name="contact-form" method="post" action="">
                 <div class="col-sm-5 col-sm-offset-1">
                     <div class="form-group">
                         <label>ตัวอักษรต้นฉบับ</label>
-                        <!--<input type="text" name="subject" class="form-control" required="required">-->
-                        <select name="src-type"  id="src-type" class="form-control" style="overflow: scroll;" >
+                        <select name="src-type"  id="src-type" class="form-control select-type translite" style="overflow: scroll;" >
                             <optgroup label="ไทย">
-                                <option value="ths" >ไทยคงรูป</option>                             
+                                <option value="thai" selected="selected" >ไทยคงรูป</option>                             
                             </optgroup>
-                            <optgroup label="อินเดีย">
-                                <option value="dev" selected="selected" >เทวนาครี (अ)</option>
-                                <option value="ben">เบงกาลี (অ)</option>
-                                <option value="pun">คุรมุขี (ਅ)</option>
-                                <option value="guj">คุชราตี (અ)</option>
-                                <option value="ori">โอริยา (ଅ)</option>
-                                <option value="tam">ทมิฬ (அ)</option>
-                                <option value="tel">เตลูกู (అ)</option>
-                                <option value="kan">กันนาดา (ಅ)</option>
-                                <option value="mal">มาลายัม (അ)</option>
+                            <optgroup label="อินเดีย">                             
+                                <option value="devanagari"  >เทวนาครี (अ)</option>
+                                <option value="bengali">เบงกาลี (অ)</option>
+                                <option value="gurmukhi">คุรมุขี (ਅ)</option>
+                                <option value="gujarati">คุชราตี (અ)</option>
+                                <option value="oriya">โอริยา (ଅ)</option>
+                                <option value="tamil">ทมิฬ (அ)</option>
+                                <option value="telugu">เตลูกู (అ)</option>
+                                <option value="kannada">กันนาดา (ಅ)</option>
+                                <option value="malayalam">มาลายัม (അ)</option>
                             </optgroup>
                             <optgroup label="โรมัน">
-                                <option value="rIast" >IAST</option>
-                                <option value="rKol">Kolkata</option>
-                                <option value="rItrans" >ITRANS</option>
-                                <option value="rHk">Harvard-Kyoto</option>
-                                <option value="rSlp">SLP</option>
+                                <option value="iast" >โรมัน IAST</option>
+                                <option value="kolkata">โรมัน Kolkata</option>
+                                <option value="itrans">โรมัน ITRANS</option>
+                                <option value="hk">โรมัน Harvard-Kyoto</option>
+                                <option value="slp1">โรมัน SLP</option>
                             </optgroup>                           
                         </select>
                     </div>
                     <div class="form-group">
                         <!--<label>Message *</label>-->
-                        <textarea name="src-txt"  id="src-txt" required="required" class="form-control" rows="8"></textarea>
+                        <textarea name="src-txt"  id="src-txt" required="required" class="form-control translite" rows="8"></textarea>
                     </div>                         
                 </div>
                 <div class="col-sm-5">
                     <div class="form-group">
-                        <label>ตัวอักษรผลลัพธ์</label>
-                        <select class="form-control" name="dest-type"  id="dest-type">
-                            <optgroup label="ไทย">
-                                <option value="ths">ไทยคงรูป</option>
-                                <option value="thn">ไทยปรับรูป</option>
-                            </optgroup>
+                        <label>ตัวอักษรเปรียบเทียบอื่นๆ</label>
+                        <select class="form-control select-type translite" name="dest-type"  id="dest-type">
                             <optgroup label="อินเดีย">
-                                <option value="dev">เทวนาครี (अ)</option>
-                                <option value="ben">เบงกาลี (অ)</option>
-                                <option value="pun">คุรมุขี (ਅ)</option>
-                                <option value="guj">คุชราตี (અ)</option>
-                                <option value="ori">โอริยา (ଅ)</option>
-                                <option value="tam">ทมิฬ (அ)</option>
-                                <option value="tel">เตลูกู (అ)</option>
-                                <option value="kan">กันนาดา (ಅ)</option>
-                                <option value="mal">มาลายัม (അ)</option>
+                                <option value="devanagari">เทวนาครี (अ)</option>
+                                <option value="bengali">เบงกาลี (অ)</option>
+                                <option value="gurmukhi">คุรมุขี (ਅ)</option>
+                                <option value="gujarati">คุชราตี (અ)</option>
+                                <option value="oriya">โอริยา (ଅ)</option>
+                                <option value="tamil">ทมิฬ (அ)</option>
+                                <option value="telugu">เตลูกู (అ)</option>
+                                <option value="kannada">กันนาดา (ಅ)</option>
+                                <option value="malayalam">มาลายัม (അ)</option>
                             </optgroup>
                             <optgroup label="โรมัน">
-                                <option value="rIast" selected="selected" >IAST</option>
-                                <option value="rKol">Kolkata</option>
-                                <option value="rItrans" >ITRANS</option>
-                                <option value="rHk">Harvard-Kyoto</option>
-                                <option value="rSlp">SLP</option>
-                            </optgroup>     
+                                <option value="iast" selected="selected" >โรมัน IAST</option>
+                                <option value="kolkata">โรมัน Kolkata</option>
+                                <option value="itrans">โรมัน ITRANS</option>
+                                <option value="hk">โรมัน Harvard-Kyoto</option>
+                                <option value="slp1">โรมัน SLP</option>
+                            </optgroup> 
+                            <optgroup label="ไม่ระบุ">
+                                <option value="none" >ไม่ระบุ</option>
+                            </optgroup>
                         </select>
                     </div>
                     <div class="form-group">
                         <!--<label>Message *</label>-->
-                        <textarea name="dest-txt"  id="dest-txt" required="required" class="form-control" rows="8"></textarea>
+                        <textarea name="dest-txt"  id="dest-txt" required="required" class="form-control translite" rows="8" maxlength="1000"></textarea>
                     </div>                                      
                 </div>
                 <div class="form-group center">
-                    <button type="submit" name="submit" class="btn btn-primary btn-lg" required="required">Submit Message</button>
+                    <a href="#transliterate-compare" id="translite-button" class="btn btn-info btn-xl page-scroll">
+                        <span class="glyphicon glyphicon glyphicon-transfer" aria-hidden="true"></span>
+                        &nbsp;ปริวรรต เป็น ไทย-สันสกฤต
+                    </a>
+                    <!--<button id="translite-button" type="button" name="submit" class="btn btn-primary btn-lg" required="required">สร้างตารางเปรียบเทียบ</button>-->
                 </div>
             </form> 
-        </div><!--/.row-->
-        
-        
-
+        </div><!--/.row-->      
     </div><!--/.container-->
+    <div id="transliterate-compare">
+        <!--Call Ajax-->
+    </div>
+
+    <div class="row contact-wrap"></div>
 </section><!--/#contact-page-->

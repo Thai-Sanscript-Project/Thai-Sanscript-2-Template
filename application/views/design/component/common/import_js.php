@@ -6,6 +6,7 @@
 <script src="<?php echo_js() ?>/main.js"></script>
 <script src="<?php echo_js() ?>/wow.min.js"></script>
 <script src="<?php echo base_url() ?>sanscript/sanscript.js"></script>
+<script src="<?php echo base_url() ?>sanscript/thaisanscript.js"></script>
 <script type="text/javascript">
     $('.carousel').carousel();
 </script>

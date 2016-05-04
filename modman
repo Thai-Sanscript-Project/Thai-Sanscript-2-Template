@@ -1,5 +1,6 @@
 /inc /inc
 /application/libraries/Template.php /application/libraries/Template.php
+/application/libraries/Thaisans_adapter.php /application/libraries/Thaisans_adapter.php
 /application/views/design /application/views/design
 /application/views/demo /application/views/demo
 /application/controllers/demo /application/controllers/demo
