@@ -5,4 +5,11 @@
     $(".translite").bind('keyup keydown keypress change paste', function () {
         $("#dest-txt").val(transliteration());
     });
+    $("#src-type").bind('change', function () {
+        if (getSrcTypeval() === 'thai') {
+            $("#hint-thai").show();
+        } else {
+            $("#hint-thai").hide();
+        }
+    });
 </script>

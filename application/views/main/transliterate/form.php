@@ -1,6 +1,6 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed'); ?>
 <section id="contact-info" style="background: #f2f2f2;">
-    <div class="container">
+    <div id="translite-form" class="container">
         <div class="center">        
             <h2>เลือกชนิดตัวอักษรที่จะทำการปริวรรต</h2>
             <p class="lead">เมื่อคุณเลือกชนิดตัวอักษรแล้ว คุณสามารถดูตารางเปรียบเทียบการปริวรรตอักษรด้านล่าง [<a href="#contact-page">ดูตารางเปรียบเทียบอักษร</a>]</p>
@@ -10,7 +10,8 @@
             <form id="main-contact-form" class="contact-form" name="contact-form" method="post" action="">
                 <div class="col-sm-5 col-sm-offset-1">
                     <div class="form-group">
-                        <label>ตัวอักษรต้นฉบับ</label>
+                        <label>ตัวอักษรต้นฉบับ</label>   
+                       <a id="hint-thai" href="#" data-toggle="modal" data-target="#agreement"><span class="glyphicon glyphicon-paperclip" aria-hidden="true"></span>ข้อตกลงการปริวรรต</a>
                         <select name="src-type"  id="src-type" class="form-control select-type translite" style="overflow: scroll;" >
                             <optgroup label="ไทย">
                                 <option value="thai" selected="selected" >ไทย-คงรูป(แบบแผน)</option>                             

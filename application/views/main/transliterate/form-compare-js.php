@@ -8,6 +8,7 @@
             $("body").removeClass("loading");
         }
     });
+
     $('#translite-button').click(function () {
         var sourceTxt = getSrcTxtval();
         var source = lineSplit(sourceTxt);
@@ -28,16 +29,21 @@
                 "src-txt": sendToBackend
             },
             success: function (data) {
-                var lang = new Array();
-
+                var display = new Array(1, 1, 1, 1);
+                var showAndCheck = new Array(1, 0, 1, 0);
+//             
+                if (getSrcTypeval() === 'thai') {
+                    display = new Array(1, 1, 0, 1);
+                    showAndCheck = new Array(1, 1, 0, 0);
+                }
 
 
                 var html = header() +
-                        checkbox() +
-                        langSection('1', getSrcTypeText(), source) +
-                        langSection('2', getDestTypeText(), destination) +
-                        langSection('3', 'ไทย-คงรูป(แบบแผน)', data[0]) +
-                        langSection('4', 'ไทย-ปรับรูป(ทั่วไป)', data[1]) +
+                        checkboxList(display, showAndCheck) +
+                        langSection('1', getSrcTypeText(), source, display[0], showAndCheck[0]) +
+                        langSection('2', getDestTypeText(), destination, display[1], showAndCheck[1]) +
+                        langSection('3', 'ไทย-คงรูป(แบบแผน)', data[0], display[2], showAndCheck[2]) +
+                        langSection('4', 'ไทย-ปรับรูป(ทั่วไป)', data[1], display[3], showAndCheck[3]) +
                         backButton();
                 $('#transliterate-compare').html(html);
             },
@@ -97,9 +103,16 @@
         return html;
     }
 
-    function langSection(langCode, langName, dataList) {
-        var html = '<div id="' + langCode + '" class="code" ><p class="text-center code-p">' + langName + '</p>' +
-                '<ol class="code-ol">' + getLine(langCode, dataList) + '</ol></div>';
+    function langSection(langCode, langName, dataList, display, showAndCheck) {
+        var html = '';
+        var show = '';
+        if (showAndCheck === 0) {
+            show = ' style = "display:none" ';
+        }
+        if (display === 1) {
+            html = '<div id="' + langCode + '" class="code"  ' + show + '><p class="text-center code-p">' + langName + '</p>' +
+                    '<ol class="code-ol">' + getLine(langCode, dataList) + '</ol></div>';
+        }
         return html;
     }
     function header() {
@@ -114,23 +127,34 @@
 
         return html;
     }
-    function checkbox() {
+    function checkboxList(displayArr, showAndCheckArr) {
+
         var html = '<div class="container"><div class="row"><div class="col-lg-8 col-lg-offset-2 text-center"><p>' +
-                '<input type="checkbox" class="checkbox-sanskrit" id="checkbox-1" value="1">' +
-                '<label for="checkbox-1">' + getSrcTypeText() + '</label>&nbsp;' +
-                '<input type="checkbox" class="checkbox-sanskrit" id="checkbox-2" value="2" checked="checked">' +
-                '<label for="checkbox-2">' + getDestTypeText() + '</label>&nbsp;' +
-                '<input type="checkbox" class="checkbox-sanskrit" id="checkbox-3" value="3" checked="checked">' +
-                '<label for="checkbox-3">ไทย-คงรูป(แบบแผน)</label>&nbsp;' +
-                '<input type="checkbox" class="checkbox-sanskrit" id="checkbox-4" value="4">' +
-                '<label for="checkbox-4">ไทย-ปรับรูป(ทั่วไป)</label>&nbsp;' +
+                checkbox(displayArr[0], showAndCheckArr[0], 1, getSrcTypeText()) +
+                checkbox(displayArr[1], showAndCheckArr[1], 2, getDestTypeText()) +
+                checkbox(displayArr[2], showAndCheckArr[2], 3, 'ไทย-คงรูป(แบบแผน)') +
+                checkbox(displayArr[3], showAndCheckArr[3], 4, 'ไทย-ปรับรูป(ทั่วไป)') +
                 '</p></div></div></div>';
         return html;
     }
+    function checkbox(display, showAndCheck, number, name) {
+        var html = '';
+        var check = '';
+        if (showAndCheck === 1) {
+            check = 'checked="checked"';
+        }
+        if (display === 1) {
+            html = '<input type="checkbox" class="checkbox-sanskrit" id="checkbox-' + number + '" value="' + number + '" ' + check + '>' +
+                    '<label for="checkbox-' + number + '">' + name + '</label>&nbsp;';
+        }
+        return html;
+    }
+
+
     function backButton() {
         var html = '<div style="clear: both"></div><div class="container"><div class="row" style="height: 100px">' +
                 '<div class="col-lg-8 col-lg-offset-2 text-center"><p></p>' +
-                '<a href="#about" class="btn btn-default btn-xl page-scroll">' +
+                '<a href="#translite-form" class="btn btn-default btn-xl page-scroll">' +
                 '<span class="glyphicon glyphicon-arrow-up" aria-hidden="true"></span>' +
                 'กลับไปปริวรรต</a></div></div></div> ';
         return html;
