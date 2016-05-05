@@ -26,13 +26,26 @@
         var srcType = getSrcTypeval();
         var destType = getDestTypeVal();
 
-        if (destType !== 'none') {
-            if (srcType === 'thai') {
-                /*thaisanscript.js*/
-                txt = thaisanscript(txt);
-                srcType = 'iast';
-            }
-            output = Sanscript.t(txt, srcType, destType);
+        if (srcType === 'thai') {
+            /*thaisanscript.js*/
+            txt = thaisanscript(txt);
+            srcType = 'iast';
+        }
+        output = Sanscript.t(txt, srcType, destType);
+
+        return output;
+    }
+
+    function transliteToBackend() {
+        var output = "";
+        var txt = getSrcTxtval();
+        var srcType = getSrcTypeval();
+
+        if (srcType === 'thai') {
+            /*thaisanscript.js*/
+            output = thaisanscript(txt);
+        } else {
+            output = Sanscript.t(txt, srcType, 'iast');
         }
         return output;
     }

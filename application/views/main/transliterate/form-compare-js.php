@@ -9,12 +9,12 @@
         }
     });
     $('#translite-button').click(function () {
-        var source = lineSplit(getSrcTxtval());
-        var destination = Sanscript.t(getSrcTxtval(), getSrcTypeval(), getDestTypeVal());
+        var sourceTxt = getSrcTxtval();
+        var source = lineSplit(sourceTxt);
+        var destination = transliteration();
         destination = lineSplit(destination);
+        var sendToBackend = transliteToBackend();
 
-
-        console.log(source.length);
         var d = new Date();
         var timestamp = d.getTime();
         $.ajax({
@@ -25,17 +25,20 @@
             data: {
 //                    "sanskrit-romanize": roman.val(),
 //                    "sanskrit-devanagari": devanagari.val(),
-                "src-txt": getSrcTxtval()
+                "src-txt": sendToBackend
             },
             success: function (data) {
                 var lang = new Array();
-                lang.push("Lemon");
+
+
 
                 var html = header() +
+                        checkbox() +
                         langSection('1', getSrcTypeText(), source) +
                         langSection('2', getDestTypeText(), destination) +
-                        langSection('3', 'ไทย-คงรูป(แบบแผน)', data[1]) +
-                        langSection('0', 'ไทย-ปรับรูป(ทั่วไป)', data[0]);
+                        langSection('3', 'ไทย-คงรูป(แบบแผน)', data[0]) +
+                        langSection('4', 'ไทย-ปรับรูป(ทั่วไป)', data[1]) +
+                        backButton();
                 $('#transliterate-compare').html(html);
             },
             error: function (XMLHttpRequest, textStatus, errorThrown) {
@@ -44,6 +47,7 @@
                 console.log("Error: " + errorThrown);
             }
         });
+
     });
 
     var counterChecked = 0;
@@ -69,10 +73,10 @@
         var num = idsplit[1] + "-" + idsplit[2];
 
         $('.s').removeClass('hilight');
-        $("#0-" + num).addClass('hilight');
         $("#1-" + num).addClass('hilight');
         $("#2-" + num).addClass('hilight');
         $("#3-" + num).addClass('hilight');
+        $("#4-" + num).addClass('hilight');
     });
 
 
@@ -112,15 +116,15 @@
     }
     function checkbox() {
         var html = '<div class="container"><div class="row"><div class="col-lg-8 col-lg-offset-2 text-center"><p>' +
-                '<input type="checkbox" class="checkbox-sanskrit" id="checkbox-3" value="3">' +
-                '<label for="checkbox-3">เทวนาครี</label>&nbsp;' +
-                '<input type="checkbox" class="checkbox-sanskrit" id="checkbox-0" value="0" checked="checked">' +
-                '<label for="checkbox-0">โรมาไนซ์</label>&nbsp;' +
-                '<input type="checkbox" class="checkbox-sanskrit" id="checkbox-1" value="1" checked="checked">' +
-                '<label for="checkbox-1">ไทย-ทั่วไป(แบบปรับรูป)</label>&nbsp;' +
-                '<input type="checkbox" class="checkbox-sanskrit" id="checkbox-2" value="2">' +
-                '<label for="checkbox-2">ไทย-แบบแผน(แบบคงรูป)</label>&nbsp;' +
-                '</p></div></div></div>'
+                '<input type="checkbox" class="checkbox-sanskrit" id="checkbox-1" value="1">' +
+                '<label for="checkbox-1">' + getSrcTypeText() + '</label>&nbsp;' +
+                '<input type="checkbox" class="checkbox-sanskrit" id="checkbox-2" value="2" checked="checked">' +
+                '<label for="checkbox-2">' + getDestTypeText() + '</label>&nbsp;' +
+                '<input type="checkbox" class="checkbox-sanskrit" id="checkbox-3" value="3" checked="checked">' +
+                '<label for="checkbox-3">ไทย-คงรูป(แบบแผน)</label>&nbsp;' +
+                '<input type="checkbox" class="checkbox-sanskrit" id="checkbox-4" value="4">' +
+                '<label for="checkbox-4">ไทย-ปรับรูป(ทั่วไป)</label>&nbsp;' +
+                '</p></div></div></div>';
         return html;
     }
     function backButton() {

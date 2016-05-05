@@ -13,7 +13,7 @@
                         <label>ตัวอักษรต้นฉบับ</label>
                         <select name="src-type"  id="src-type" class="form-control select-type translite" style="overflow: scroll;" >
                             <optgroup label="ไทย">
-                                <option value="thai" selected="selected" >ไทยคงรูป</option>                             
+                                <option value="thai" selected="selected" >ไทย-คงรูป(แบบแผน)</option>                             
                             </optgroup>
                             <optgroup label="อินเดีย">                             
                                 <option value="devanagari"  >เทวนาครี (अ)</option>
@@ -62,9 +62,7 @@
                                 <option value="hk">โรมัน Harvard-Kyoto</option>
                                 <option value="slp1">โรมัน SLP</option>
                             </optgroup> 
-                            <optgroup label="ไม่ระบุ">
-                                <option value="none" >ไม่ระบุ</option>
-                            </optgroup>
+
                         </select>
                     </div>
                     <div class="form-group">
