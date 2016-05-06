@@ -13,8 +13,7 @@
       ไทย-สันสคริปท์ เป็นแต่เพียงเครื่องมือช่วยในการปริวรรตเท่านั้น ผลลัพท์จากโปรแกรมนี้อาจยังมีบางส่วนที่ยังผิดพลาดอยู่ 
       ควรตรวจทานอีกรอบก่อนใช้งานจริง">
 <meta name="google-site-verification" content="3cbuf7_O0aJAZjCDMk2VjJnXDrAtIbzyHLmUs2r1cVQ" />
-<meta property="og:title" content="ไทย-สันสคริปท์ เป็นโปรแกรมช่วยในการปริวรรต(Transliterate) จาก 
-      โรมาไนซ์-สันสกฤต มาเป็น ไทย-สันสกฤต" />
+<meta property="og:title" content="ไทย-สันสคริปท์เป็นโปรแกรมช่วยในการปริวรรตจาก โรมัน-สันสกฤต มาเป็น ไทย-สันสกฤต" />
 <meta property="og:site_name" content="THAI - SANSCRIPT:"/>
 <meta property="og:url" content="<?php echo base_url(uri_string()); ?>" />
 <meta property="og:description" 
@@ -30,8 +29,8 @@
 <meta property="og:locale" content="th_TH" />
 <meta property="article:author" content="https://www.facebook.com/sagittariusDraconis" />
 <meta property="article:publisher" content="https://www.facebook.com/sagittariusDraconis" />
-<meta property="og:image" content="inc/img/portfolio/1.jpg" />
+<meta property="og:image" content="<?php echo base_url('inc/images/facebook.jpg'); ?>" />
 <!--<meta property="og:image:url" content="inc/img/fb.jpg" />-->
-<meta property="og:image:type" content="inc/img/portfolio/1.jpg" />
+<meta property="og:image:type" content="<?php echo base_url('inc/images/facebook.jpg'); ?>" />
 <!--META-->
 <link rel="alternate" href="http://www.thai-sanscript.com" hreflang="th-TH" />

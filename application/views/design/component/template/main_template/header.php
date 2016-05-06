@@ -33,7 +33,7 @@ $menu[$mainmenu] = "active";
                 <ul class="nav navbar-nav">
                     <li class="<?php echo $menu[10] ?>"><a href="<?php echo site_url() ?>">หน้าหลัก</a></li>
                     <li class="<?php echo $menu[20] ?>"><a href="<?php echo site_url() ?>/main/transliterate">ปริวรรต</a></li>
-                    <li class="<?php echo $menu[30] ?>"><a href="<?php echo site_url() ?>/demo/theme/services">ติดต่อเรา</a></li>
+                    <li class="<?php echo $menu[30] ?>"><a href="http://blog.thai-sanscript.com/">บทความ</a></li>
                    <!--<?php /**
                     <li class="<?php echo $menu[40] ?>"><a href="<?php echo site_url() ?>/demo/theme/portfolio">Portfolio</a></li>
                     <li class="dropdown <?php echo $menu[50] ?>">
