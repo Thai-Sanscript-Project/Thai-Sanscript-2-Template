@@ -79,6 +79,7 @@
         var num = idsplit[1] + "-" + idsplit[2];
 
         $('.s').removeClass('hilight');
+        $("#0-" + num).addClass('hilight');
         $("#1-" + num).addClass('hilight');
         $("#2-" + num).addClass('hilight');
         $("#3-" + num).addClass('hilight');

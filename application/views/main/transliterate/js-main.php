@@ -2,7 +2,7 @@
 <script type="text/javascript">
 
     function getSrcTxtval() {
-        return $("#src-txt").val();
+        return $("#src-txt").val().toLowerCase();
     }
     function getDestTxtVal() {
         return $("#dest-txt").val();
