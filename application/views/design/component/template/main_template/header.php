@@ -5,7 +5,7 @@ $menu[10] = "";
 $menu[20] = "";
 $menu[30] = "";
 $menu[40] = "";
-//$menu[50] = "";
+$menu[50] = "";
 //$menu[51] = "";
 //$menu[52] = "";
 //$menu[53] = "";
@@ -35,6 +35,7 @@ $menu[$mainmenu] = "active";
                     <li class="<?php echo $menu[20] ?>"><a href="<?php echo site_url() ?>/main/transliterate">ปริวรรต</a></li>
                     <li class="<?php echo $menu[30] ?>"><a href="<?php echo site_url() ?>/main/example">ตัวอย่างการปริวรรต</a></li>
                     <li class="<?php echo $menu[40] ?>"><a href="http://blog.thai-sanscript.com/">บทความ</a></li>
+					<li class="<?php echo $menu[50] ?>"><a href="<?php echo base_url() ?>/dict">พจนานุกรมสันสกฤต-ไทย</a></li>
                    <!--<?php /**
                     <li class="<?php echo $menu[40] ?>"><a href="<?php echo site_url() ?>/demo/theme/portfolio">Portfolio</a></li>
                     <li class="dropdown <?php echo $menu[50] ?>">
